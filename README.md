@@ -4,9 +4,9 @@
 ClockPetals is an online visual analytics system designed for traffic analysis. This project was submitted to [2017 IEEE Visual Analytics for Science and Technology (VAST) Challenge Mini-Challenge One](http://vacommunity.org/VAST+Challenge+2017+MC1).<br>
 <img src="/overview.gif"/>
 
-A bit about the VAST challenge: it's an annual IEEE competition event aiming to advancing visual analytics idea, design, and techniques. It usually kick off in late April and ends by mid July.
+A bit about the VAST challenge: it's an annual IEEE competition event aiming to advancing visual analytics idea, design, and techniques. It usually kicks off in late April and ends by mid July.
 
-Each year VAST challenge provides meticulously synthesized dataset and context story to participants from all over the world and asks them to investigate what the data can tell via visual analytics methods. Typically every challenge consists of 2-3 sub challenges (called "mini-challenge") and, maybe, a grand challenge when the mini challenges are connected or in the same context. The investigation result (solution) typically should answer 3-5 questions the challenge asks. For each question, the solution should presents about 5 visual evidence and explanation for supporting the patterns/anomalies the investigation finds.
+Each year VAST challenge provides meticulously synthesized dataset and context stories to the participants from all over the world and asks them to investigate what the data can tell via visual analytics methods, or how visual analytics can help solving problems. Typically every challenge consists of 2-3 sub challenges (called "mini-challenge") and, maybe, a grand challenge when the mini challenges are connected or in the same context. The investigation result (solution) typically should answer 3-5 questions the challenge asks. For each question, the solution should presents about 5 visual evidence and explanation for supporting the patterns/anomalies the investigation finds.
 
 In the summer of 2017 (also in 2016 but another story), I worked with two serial-player-and-awardee professors in VAST challenge, along with an undergrad developer, a data scientist PhD (remote),and three visual designers. We competed for two mini challenges in parallel. I was appointed as the team lead to
 
