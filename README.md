@@ -15,11 +15,11 @@ The synthetic data came from the vehicle sensors installed at major visiting sit
 
 ![park map](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways.bmp). 
 
-White pixels for the roads and black pixels for the park land. All the sensor locations were tagged by pixel in colors and labeled accordingly. Map description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Preserve%20Description.docx)
+White pixels for the roads and black pixels for the park land. All the sensor locations were tagged by pixel in colors and labeled accordingly. Map description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Preserve%20Description.docx).
 
 * Sensor data in CSV format. 
 
-Same vehicle entered the park multiple times maintained the <em>car ID</em>. There were seven types of vehicles in total. Data description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Data%20Descriptions%20for%20MC1%20v2.docx)
+Same vehicle entered the park multiple times maintained the <em>car ID</em>. There were seven types of vehicles in total. Data description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Data%20Descriptions%20for%20MC1%20v2.docx).
 
 |Timestamp|car-id|car-type|gate-name|
 |---|---|---|---|
@@ -43,14 +43,14 @@ Same vehicle entered the park multiple times maintained the <em>car ID</em>. The
 * A Python module to process the bitmap park map to
   * clean the grey noises;
   * enlarge the map for human reading.
-* Imported the data to MySQL database and restructured to four tables
+* Imported the data to MySQL database and restructured to four tables.
   * A table with all records, adding index, total times of visit, and the temporal order of each visit.
   * A table compressed the visits from the same vehicle, showing total number of records, earliest and latest record time, and total times of visit.
   * A table with rows showing each visit segmenet based on temporal order.
   * A table specifically with rows indicating the duration of vehicles staying on camping sites.
   
 ### Design
-The design ideas and iterations can be found [here](https://va.tech.purdue.edu/vast2017/presentation/Purdue-Zhou-Tang-Wu-Multi-final.pptx) or [here](https://vimeo.com/242499465)
+The design ideas and iterations can be found [here](https://va.tech.purdue.edu/vast2017/presentation/Purdue-Zhou-Tang-Wu-Multi-final.pptx) or [here](https://vimeo.com/242499465).
 
 ### [Finding](http://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202017/challenges/Mini-Challenge%201/entries/Purdue%20University/)
 
