@@ -5,17 +5,17 @@ This project was submitted to [2017 IEEE Visual Analytics for Science and Techno
 
 ## Simplified Problem Statement
 ### Context
-The synthetic data came from the vehicle sensors installed at major visiting sites, road conjunctions, entrances, and gates in a fictional natural perserve park. Each vehicle that visited and **entered** the park would be assigned a unique <em>car ID</em>. The sensor would record the <em>car ID</em> and the <em>timestamp</em> when the vehicle passed by the sensor. So, each vehicle passed by a sensor would generate a row of record in the dataset. The dataset contained 170,000+ entries over 13 months. 
+The synthetic data came from the vehicle sensors installed at major visiting sites, road conjunctions, entrances, and gates in a fictional natural perserve park. Each vehicle that visited and **entered** the park would be assigned a unique <em>car ID</em>. The sensor would record the <em>car ID</em> and the <em>timestamp</em> when the vehicle passed by the sensor. So, each vehicle passed by a sensor would generate a row of record in the dataset. The dataset contained 170,000+ entries over 13 months.
 
 ### Data
 
-* A 200 x 200 bitmap 
+* A 200 x 200 bitmap
 
-![park map](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways.bmp). 
+![park map](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways.bmp).
 
 White pixels for the roads and black pixels for the park land. All the sensor locations were tagged by pixel in colors and labeled accordingly. Map description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Preserve%20Description.docx).
 
-* Sensor data in CSV format. 
+* Sensor data in CSV format.
 
 Same vehicle entered the park multiple times maintained the <em>car ID</em>. There were seven types of vehicles in total. Data description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Data%20Descriptions%20for%20MC1%20v2.docx).
 
@@ -32,8 +32,7 @@ Same vehicle entered the park multiple times maintained the <em>car ID</em>. The
 |2015-05-01 01:55:25|20155501015525-264|1|entrance0|
 |2015-05-01 01:56:53|20155501015525-264|1|general-gate1|
 |2015-05-01 01:59:27|20155501015525-264|1|ranger-stop2|
-|2015-05-01 02:02:27|20155501015525-264|1|ranger-stop0|
-|2015-05-01 02:05:39|20155501015525-264|1|general-gate2|
+
 
 ## Data visualization design
 
@@ -46,7 +45,7 @@ Same vehicle entered the park multiple times maintained the <em>car ID</em>. The
   * A table compressed the visits from the same vehicle, showing total number of records, earliest and latest record time, and total times of visit.
   * A table with rows showing each visit segmenet based on temporal order.
   * A table specifically with rows indicating the duration of vehicles staying on camping sites.
-  
+
 ### Design
 The design ideas and iterations can be found [here](https://va.tech.purdue.edu/vast2017/presentation/Purdue-Zhou-Tang-Wu-Multi-final.pptx) or [here](https://vimeo.com/242499465).
 
