@@ -5,9 +5,9 @@ ClockPetals is an online visual analytics system designed for traffic analysis. 
 
 A bit about the VAST challenge: it's an annual IEEE competition event aiming to advancing visual analytics idea, design, and techniques. It usually kick off in late April and ends by mid July.
 
-Each year VAST challenge provides meticulously synthesized dataset and context story to participants from all over the world and asks them to investigate what the data can tell via visual analytics methods. Typically every challenge consists of 2-3 sub challenges (called "mini-challenge") and, maybe, a grand challenge when the mini challenges are connected or in the same context. The investigation result (solution) typically should answer 3-5 questions the challenge asks. For each question, the solution should presents about 5 visual evidence for supporting the patterns/anomalies the investigation finds.
+Each year VAST challenge provides meticulously synthesized dataset and context story to participants from all over the world and asks them to investigate what the data can tell via visual analytics methods. Typically every challenge consists of 2-3 sub challenges (called "mini-challenge") and, maybe, a grand challenge when the mini challenges are connected or in the same context. The investigation result (solution) typically should answer 3-5 questions the challenge asks. For each question, the solution should presents about 5 visual evidence and explanation for supporting the patterns/anomalies the investigation finds.
 
-In the summer of 2017 (also in 2016 but another story), I worked with two serial-competitor-and-awardee professors in VAST challenge, along with an undergrad developer, a data scientist PhD (remote),and three visual designers. We competed for two mini challenges in parallel. I was appointed as the team lead to
+In the summer of 2017 (also in 2016 but another story), I worked with two serial-player-and-awardee professors in VAST challenge, along with an undergrad developer, a data scientist PhD (remote),and three visual designers. We competed for two mini challenges in parallel. I was appointed as the team lead to
 
 * **manage the design and development iteration**. Normally we had 1-2 weekly meetings to report the progress and to discuss/critique the design ideas and their implementation. Since the projects were driven by the solution and the design, we started by exploring and massaging the data in the first couple of weeks. Meanwhile we brainstormed a lot of design ideas. When a design plan including features and visualization forms were determined in the meetings, I setup goals and deadlines for both design and development so that we could present the practical-but-mocked-up progress in the next meeting.
 
@@ -16,9 +16,11 @@ In the summer of 2017 (also in 2016 but another story), I worked with two serial
 
 * **implement and code the design ideas for mini challenge one** with the undergrad developer. I architected the tech stack, controlled the versions (OMG I really should've used Git but it was complicated...), and suggested the code styles. My resolute choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
 
-* **morally support the team** by organizing team lunch and activities such as canoeing and barbecues.
+* **oversee the progress of mini challenge two** as we had quite a lot of ideation trials and its design iteration did not finalize until the last a couple of weeks.
 
-Okay, now let's begin with the simplified version of the problem...
+* **support the team** also by organizing team lunch and activities such as canoeing and barbecues. Most team members were the first time participants. More importantly, they lacked experience of being involved into a serious large project driven by specific outcomes (The Award!). I made rigorous daily schedules while fought with them from the beginning to the end in order to keep everything on the right track without a KPI or corporate rules (As nobody could/would fire anybody while they should in school).
+
+Okay, so much for the background. Now let's begin with the simplified version of the problem...
 
 
 ## Problem Statement
@@ -99,10 +101,36 @@ Okay, now let's begin with the simplified version of the problem...
     |20150003080058-668|3|2015-07-03|camping0|09:00:00|
     |20150011070002-311|3|2015-07-11|camping0|07:00:00|
 
-## Design Ideation
+## Features
 The design process including ideations and iterations can be found [here](https://va.tech.purdue.edu/vast2017/presentation/Purdue-Zhou-Tang-Wu-Multi-final.pptx) or [here](https://vimeo.com/242499465). Below is some highlights.
 
-*
+* Map
+  * Ideation
+
+    Given a map and time-sequential records, it's a typical spatio-temporal visualization problem. However, the map has nothing to do with the real world, which means no map API is available. The provided map looks utterly unpleasant (believe me or not, there was team made visualization out of that black map image). Moreover, we did further investigation on the map and the data and found that some road information seemed redundant. For example, we don't care much about if the vehicle took east bound or west bound to travel from location A to B. We also found major road conjunctions in the park, where the vehicles must pass by when their trip are across the park area. We came up an idea to revamp the map to make it more visually pleasant withholding necessary information. One of the visual designers did this in Adobe Illustrator so that we can have the pair (x, y) of the sensor of each site/gate.
+
+    Expressing a road that connects two sites is the next task. We wanted to distinguish the traffic direction (A to B or B to A) while maintaining the clarity. Google Map enables the traffic layer on each bounds of the road but one really needs to zoom in to tell the difference. We came up with an idea so please see iteration section.
+
+  * Iteration
+
+    ![map iteration](https://va.tech.purdue.edu/vast2017/mc1/design/map.png)
+    1. First, we attempted forced-directed graph without force as the nodes' location should be fixed. The links between nodes represent two directions of the road by the arrows and their shades tell the traffic amount. The problem is the arrows overlapping with the node. A closer look,
+    ![directed network](https://va.tech.purdue.edu/vast2017/mc1/design/directed-network.jpg)
+
+    2. Then we updated the directed graph to geographic based map using curvature to indicate the traffic direction (assuming driving by the right). The position of the nodes, which are park sites, strictly follows the provided map. Color of the nodes indicates its type. The links, a.k.a the roads, are double coded by width and colors. However, the use of hues for amount are confusing and the links width are hard to differentiate.
+    ![geo map](https://va.tech.purdue.edu/vast2017/mc1/design/geomap.png)
+
+    3. Finally we finalized the design with the map below. We redistributed the positions of the gates for aesthetics. After all the exact location of each site is compromisable. We carefully designed the color of the nodes and used only one color for the links with various brightness to tell the traffic. The meaning of the width of the links change dynamically based on the maximum local value in the current view.
+    ![final map](https://va.tech.purdue.edu/vast2017/mc1/design/finalmap.png)
+
+* Node (a.k.a sites/gates)
+  * Ideation
+
+    We wanted to show
+
+
+
+###
 
 ### [Finding](http://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202017/challenges/Mini-Challenge%201/entries/Purdue%20University/)
 
