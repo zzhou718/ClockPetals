@@ -37,7 +37,7 @@ Same vehicle entered the park multiple times maintained the <em>car ID</em>. The
 |2015-05-01 02:02:27|20155501015525-264|1|ranger-stop0|
 |2015-05-01 02:05:39|20155501015525-264|1|general-gate2|
 
-## Design and Development
+## Data visualization design
 
 ### Preprocessing
 * A Python module to process the bitmap park map to
@@ -55,4 +55,4 @@ The design ideas and iterations can be found [here](https://va.tech.purdue.edu/v
 ### [Finding](http://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202017/challenges/Mini-Challenge%201/entries/Purdue%20University/)
 
 ## License
-This document is licensed under the [Creative Commons Attribution Share Alike 4.0 International](https://choosealicense.com/licenses/cc-by-sa-4.0/), and the underlying source code that this document is explaining is licensed under the [MIT license](LICENSE.md).
+This document is licensed under the [Creative Commons Attribution Share Alike 4.0 International](https://choosealicense.com/licenses/cc-by-sa-4.0/), and the underlying source code used to create this document is licensed under the [MIT license](LICENSE.md).
