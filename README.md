@@ -126,7 +126,30 @@ The design process including ideations and iterations can be found [here](https:
 * Node (a.k.a sites/gates)
   * Ideation
 
-    We wanted to show
+    We wanted to have enough data visualized on the overview, namely the map. Then we can filter the parameters to the details. For each node, we had 13-month, and further, 30-day, and 24-hour data. An idea of flowers (node) on the vines (links/roads) came up. So we had some design...
+    ![node](https://va.tech.purdue.edu/vast2017/mc1/design/node.jpg)
+
+  * Iteration
+
+    1. We attempted to mock up circular area map, and circularly-arranged lines, bars, and polygons. Not only the node itself, but also with the links. The areas, and length of lines, bars, or polygons show the traffic in that month/day/hour.
+    ![node ideation](https://va.tech.purdue.edu/vast2017/mc1/design/nodeiter.png)
+    2. We decided to give circular-arranged lines a try. We tried to use the length of the lines to represent the traffic amount, mimicking [dandelion](https://en.wikipedia.org/wiki/Taraxacum). But such an amount actually range from less than 10 to over 10,000. If applying same unit length, some line would be super long and some would be too short to see. The problem is obvious - applying an appropriate data transformation to make our nodes pretty. We had no luck.
+    ![node flower](https://va.tech.purdue.edu/vast2017/mc1/design/nodeflower.png)
+    3. We finalized the design to fun-shape petals. The data transformation makes much sense as the area of each fan represents the traffic amount so that the length of the radius of each fan just equals the square root the data. The colors are in harmony with each other and with the links. Color and text letter identify the sites. Especially when the given dataset ranges between Mays in two years, it's very easy to compare the data longitudinally.
+    ![node final](https://va.tech.purdue.edu/vast2017/mc1/design/nodepetals.png)
+
+* Detail view (for camping sites and ranger stops)
+  * Ideation
+
+    We wanted to plot every visitor of camping sites and ranger stops as we found they are the only places where the vehicles did not only pass by but also stayed. Our brilliant designers came up with amazing mockups...
+    ![detail ideation](https://va.tech.purdue.edu/vast2017/mc1/design/detailideas.png)
+
+  * Iteration
+
+    Same logic. Length of the lines/bars for the duration of the stay.
+    1. Lines organized linearly. The drawback is the time axis would be very long to cover every hour in every day in every month. <br>
+    ![detail linear](https://va.tech.purdue.edu/vast2017/mc1/design/detaillinear.png)
+    2. Lines organized circularly.
 
 
 
