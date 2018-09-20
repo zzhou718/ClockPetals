@@ -22,19 +22,18 @@ Okay, now let begin with the simplified version of the problem...
 ## Problem Statement
 ### Context
 **The problem**: an ornithologist investigated the human activities' impact to an endangered specie of bird in a fictional natural preserve park. He hypothetically related the downhill change of the number of birds to 1) the air and noise pollution brought by the park traffic and 2) the campers' (even poachers') invasion. Our ornithologist need help to analyze the short and long term patterns and outliers of human life in the park through traffic sensor record in order to obtain the most impactful factors.
+
 **The data**: The synthetic data came from the vehicle sensors installed at major visiting sites, road conjunctions, entrances, and gates in the park. Each vehicle that visited the park would be assigned a unique <em>car ID</em>. A sensor would record the <em>car ID</em> and the <em>timestamp</em> when the vehicle passed by the sensor. So, each vehicle passed by a sensor would generate a row of record in the dataset. The dataset contained 170,000+ entries over 13 months.
+
+**[Detail context](http://vacommunity.org/VAST+Challenge+2017+MC1)**
 
 ### Data
 
-* A 200 x 200 bitmap
-
+* A 200 x 200 bitmap<br>
 ![park map](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways.bmp).
+<br>White pixels for the roads and black pixels for the park land. All the sensor locations were tagged by pixel in colors and labeled accordingly. Map description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Preserve%20Description.docx).
 
-White pixels for the roads and black pixels for the park land. All the sensor locations were tagged by pixel in colors and labeled accordingly. Map description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Preserve%20Description.docx).
-
-* Sensor data in CSV format.
-
-Same vehicle entered the park multiple times maintained the <em>car ID</em>. There were seven types of vehicles in total. Data description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Data%20Descriptions%20for%20MC1%20v2.docx).
+* Sensor data in CSV format.<br>Same vehicle entered the park multiple times maintained the <em>car ID</em>. There were seven types of vehicles in total. Data description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Data%20Descriptions%20for%20MC1%20v2.docx).
 
 |Timestamp|car-id|car-type|gate-name|
 |---|---|---|---|
@@ -51,9 +50,7 @@ Same vehicle entered the park multiple times maintained the <em>car ID</em>. The
 |2015-05-01 01:59:27|20155501015525-264|1|ranger-stop2|
 
 
-## Data visualization design
-
-### Preprocessing
+## Data Preprocessing
 * A Python module to process the bitmap park map to
   * clean the grey noises;
   * enlarge the map for human reading.
@@ -63,7 +60,7 @@ Same vehicle entered the park multiple times maintained the <em>car ID</em>. The
   * A table with rows showing each visit segmenet based on temporal order.
   * A table specifically with rows indicating the duration of vehicles staying on camping sites.
 
-### Design
+## Design Ideation
 The design ideas and iterations can be found [here](https://va.tech.purdue.edu/vast2017/presentation/Purdue-Zhou-Tang-Wu-Multi-final.pptx) or [here](https://vimeo.com/242499465).
 
 ### [Finding](http://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202017/challenges/Mini-Challenge%201/entries/Purdue%20University/)
