@@ -6,7 +6,7 @@ ClockPetals is an online visual analytics system designed for traffic analysis. 
 
 A bit about the VAST challenge: it's an annual IEEE competition event aiming to advancing visual analytics idea, design, and techniques. It usually kicks off in late April and ends by mid July.
 
-Each year VAST challenge provides meticulously synthesized dataset and context stories to the participants from all over the world and asks them to investigate what the data can tell via visual analytics methods, or how visual analytics can help solving problems. Typically every challenge consists of 2-3 sub challenges (called "mini-challenge") and, maybe, a grand challenge when the mini challenges are connected or in the same context. The investigation result (solution) typically should answer 3-5 questions the challenge asks. For each question, the solution should presents about 5 visual evidence and explanation for supporting the patterns/anomalies the investigation finds.
+Each year VAST challenge provides meticulously synthesized dataset and context stories to the participants from all over the world and asks them to investigate what the data can tell via visual analytics methods, or how visual analytics can help solving problems. Typically every challenge consists of 2-3 sub challenges (called "mini-challenge") and, maybe, a grand challenge when the mini challenges are connected or in the same context. The investigation result (solution) should answer 3-5 questions the challenge asks. For each question, the solution should presents about 5 visual evidence and explanation for supporting the patterns/anomalies the investigation finds.
 
 In the summer of 2017 (also in 2016 but another story), I worked with two serial-player-and-awardee professors in VAST challenge, along with an undergrad developer, a data scientist PhD (remote),and three visual designers. We competed for two mini challenges in parallel. I was appointed as the team lead to
 
@@ -178,7 +178,7 @@ The entire system runs on an Apache+Linux+MySQL server hosted at Purdue. For fet
 
 ## What happened/will happen next?
 
-* I revisited the system almost a year after the competition. I refactored some code to enable the responsive layout across various computer screens.
+* I revisited the system almost a year after the competition. I refactored some code to enable the responsive layout for various computer screens.
 * Bug fixes. For example, the hourly traffic line graph is still missing in 30-day view.
 * The data gets transferred to the browser is still very large (dozens of MB). It's okay after the first-time website visit as the data would be cached. But to improve the first-time visit, a couple of things are possible:
   * use Promise to control when the data finishes transfer so that we can do some walk-through before it's done.
