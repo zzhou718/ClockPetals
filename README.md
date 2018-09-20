@@ -9,7 +9,7 @@ In the summer of 2017 (also in 2016 but another story), I worked with two serial
 
 * **manage the design and development iteration**. Normally we had 1-2 weekly meetings to report the progress and to discuss/critique the design ideas and their implementation. Since the projects were driven by the solution and the design, we started by exploring and massaging the data in the first couple of weeks. Meanwhile we brainstormed a lot of design ideas. When a design plan including features and visualization forms were determined in the meetings, I setup goals and deadlines for both design and development so that we could present the practical-but-mocked-up progress in the next meeting.
 
->![Process](https://uploads-ssl.webflow.com/5b43c1ec7ab3d835fb006c5d/5b468b8276d89c85825d1b2b_vast-process.png)
+  >![Process](https://uploads-ssl.webflow.com/5b43c1ec7ab3d835fb006c5d/5b468b8276d89c85825d1b2b_vast-process.png)
 (process flowmap courtesy by one of the designers Wenjie Wu)
 
 * **implement and code the design ideas for mini challenge one** with the undergrad developer. I architected the tech stack, controlled the versions (OMG I really should've used Git but it was complicated...), and guidelined the code styles. My resolute choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
@@ -29,26 +29,29 @@ Okay, now let begin with the simplified version of the problem...
 
 ### Data
 
-* A 200 x 200 bitmap<br>
-![park map](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways.bmp).
-<br>White pixels for the roads and black pixels for the park land. All the sensor locations were tagged by pixel in colors and labeled accordingly. Map description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Preserve%20Description.docx).
+* A 200 x 200 bitmap
 
-* Sensor data in CSV format.<br>Same vehicle entered the park multiple times maintained the <em>car ID</em>. There were seven types of vehicles in total. Data description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Data%20Descriptions%20for%20MC1%20v2.docx).
+  ![park map](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways.bmp).
 
-|Timestamp|car-id|car-type|gate-name|
-|---|---|---|---|
-|2015-05-01 00:15:13|20151501121513-39|2|entrance4|
-|2015-05-01 00:32:47|20151501121513-39|2|entrance2|
-|2015-05-01 01:12:42|20151201011242-330|5|entrance0|
-|2015-05-01 01:14:22|20151201011242-330|5|general-gate1|
-|2015-05-01 01:17:13|20151201011242-330|5|ranger-stop2|
-|2015-05-01 01:20:36|20151201011242-330|5|ranger-stop0|
-|2015-05-01 01:24:11|20151201011242-330|5|general-gate2|
-|2015-05-01 01:46:16|20151201011242-330|5|entrance2|
-|2015-05-01 01:55:25|20155501015525-264|1|entrance0|
-|2015-05-01 01:56:53|20155501015525-264|1|general-gate1|
-|2015-05-01 01:59:27|20155501015525-264|1|ranger-stop2|
+  White pixels for the roads and black pixels for the park land. All the sensor locations were tagged by pixel in colors and labeled accordingly. Map description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Preserve%20Description.docx).
 
+* Sensor data in CSV format.
+
+  Same vehicle entered the park multiple times maintained the <em>car ID</em>. There were seven types of vehicles in total. Data description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Data%20Descriptions%20for%20MC1%20v2.docx).
+
+  |Timestamp|car-id|car-type|gate-name|
+  |---|---|---|---|
+  |2015-05-01 00:15:13|20151501121513-39|2| entrance4|
+  |2015-05-01 00:32:47|20151501121513-39|2| entrance2|
+  |2015-05-01 01:12:42|20151201011242-330|5|  entrance0|
+  |2015-05-01 01:14:22|20151201011242-330|5|  general-gate1|
+  |2015-05-01 01:17:13|20151201011242-330|5|  ranger-stop2|
+  |2015-05-01 01:20:36|20151201011242-330|5|  ranger-stop0|
+  |2015-05-01 01:24:11|20151201011242-330|5|  general-gate2|
+  |2015-05-01 01:46:16|20151201011242-330|5|  entrance2|
+  |2015-05-01 01:55:25|20155501015525-264|1|  entrance0|
+  |2015-05-01 01:56:53|20155501015525-264|1|  general-gate1|
+  |2015-05-01 01:59:27|20155501015525-264|1|  ranger-stop2|
 
 ## Data Preprocessing
 * A Python module to process the bitmap park map to
