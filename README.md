@@ -1,7 +1,8 @@
 ## [ClockPetals Demo](https://va.tech.purdue.edu/vast2017/mc1 "ClockPetals")
 
 ## Introduction
-ClockPetals is an online visual analytics system designed for traffic analysis. This project was submitted to [2017 IEEE Visual Analytics for Science and Technology (VAST) Challenge Mini-Challenge One](http://vacommunity.org/VAST+Challenge+2017+MC1).
+ClockPetals is an online visual analytics system designed for traffic analysis. This project was submitted to [2017 IEEE Visual Analytics for Science and Technology (VAST) Challenge Mini-Challenge One](http://vacommunity.org/VAST+Challenge+2017+MC1).<br>
+![overview](https://va.tech.purdue.edu/vast2017/mc1/design/overview.gif)
 
 A bit about the VAST challenge: it's an annual IEEE competition event aiming to advancing visual analytics idea, design, and techniques. It usually kick off in late April and ends by mid July.
 
@@ -111,6 +112,8 @@ The design process including ideations and iterations can be found [here](https:
 
     Expressing a road that connects two sites is the next task. We wanted to distinguish the traffic direction (A to B or B to A) while maintaining the clarity. Google Map enables the traffic layer on each bounds of the road but one really needs to zoom in to tell the difference. We came up with an idea so please see iteration section.
 
+    ![map ideation](https://va.tech.purdue.edu/vast2017/mc1/design/mapinitial.png)
+
   * Iteration
 
     ![map iteration](https://va.tech.purdue.edu/vast2017/mc1/design/map.png)
@@ -138,6 +141,9 @@ The design process including ideations and iterations can be found [here](https:
     3. We finalized the design to fun-shape petals. The data transformation makes much sense as the area of each fan represents the traffic amount so that the length of the radius of each fan just equals the square root the data. The colors are in harmony with each other and with the links. Color and text letter identify the sites. Especially when the given dataset ranges between Mays in two years, it's very easy to compare the data longitudinally.
     ![node final](https://va.tech.purdue.edu/vast2017/mc1/design/nodepetals.png)
 
+* Multi-dimensional filtering
+    The traffic can be filtered by the type of the vehicles, the month they visited, and the road segment on their trip route. See the [interaction](#interactive-features) section.
+
 * Detail view (for camping sites and ranger stops)
   * Ideation
 
@@ -147,14 +153,21 @@ The design process including ideations and iterations can be found [here](https:
   * Iteration
 
     Same logic. Length of the lines/bars for the duration of the stay.
-    1. Lines organized linearly. The drawback is the time axis would be very long to cover every hour in every day in every month. <br>
+    1. Lines organized linearly. The drawback is the time axis would be very long to cover every hour in every day in every month. The team from University of Konstanz, Germany actually implemented this idea in their [submission](https://youtu.be/il1qtCqf_0M?t=3m39s). They visualize the data on huge screen to get around the use of space and enable the clearness.
+    <br>
     ![detail linear](https://va.tech.purdue.edu/vast2017/mc1/design/detaillinear.png)
-    2. Lines organized circularly. The direction of circumference is the month axis like the arrangement in overview (the node). The direction of radius is the duration of the stay. It's getting closed to the final design...
+    1. Lines organized circularly. The direction of circumference is the month axis like the arrangement in overview (the node). The direction of radius is the duration of the stay. It's getting closed to the final design...
     ![detail circular](https://va.tech.purdue.edu/vast2017/mc1/design/detaildraft.jpg)
-    3. We finalized the design as below. All vehicles that visited this camping site or ranger stops are plotted. The longer the length of the "pin", the longer this vehicle has stayed in the site. When it appears as dot, it means the stay is very short and needs to zoom in if needed. When it appears a line, it is read from outside towards center. The position of the starting end also indicates when (within a day) this vehicle entered the camping site. The ending end indicates the leaving time and provides an interactive hook to link this vehicle back to the map. The interaction designed on this view will be explained later.
+    1. We finalized the design as below. All vehicles that visited this camping site or ranger stops are plotted. The longer the length of the "pin", the longer this vehicle has stayed in the site. When it appears as dot, it means the stay is very short and needs to zoom in if needed. When it appears a line, it is read from outside towards center. The position of the starting end also indicates when (within a day) this vehicle entered the camping site. The ending end indicates the leaving time and provides an interactive hook to link this vehicle back to the map. The interaction designed on this view will be explained later.
     ![detail final](https://va.tech.purdue.edu/vast2017/mc1/design/detail.png)
 
-
+* Interactive features
+  * Month and vehicle type filter from the left panel
+    ![filter](https://va.tech.purdue.edu/vast2017/mc1/design/filter.gif)
+  * Route filter - click on the road segment to filter the vehicles that have travelled on this route. Right click to remove them. The segments are double coded by color and width. The maximum width is the most traffic in the current filtered view. The change of brightness indicates how the values in the current view compares the global maximum.
+    ![vine](https://va.tech.purdue.edu/vast2017/mc1/design/vine.gif)
+  * Vehicles in detail view filtered by selecting certain entering time. Hover the "pin" to highlight all stays by the same vehicle. Click the small circle on one end to see its route on the map.
+    ![detail](https://va.tech.purdue.edu/vast2017/mc1/design/detail.gif)
 
 ###
 
