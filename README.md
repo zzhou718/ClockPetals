@@ -2,7 +2,7 @@
 
 ## Introduction
 ClockPetals is an online visual analytics system designed for traffic analysis. This project was submitted to [2017 IEEE Visual Analytics for Science and Technology (VAST) Challenge Mini-Challenge One](http://vacommunity.org/VAST+Challenge+2017+MC1).<br>
-![overview](https://va.tech.purdue.edu/vast2017/mc1/design/overview.gif)
+<img src="/overview.gif" width="300px">
 
 A bit about the VAST challenge: it's an annual IEEE competition event aiming to advancing visual analytics idea, design, and techniques. It usually kick off in late April and ends by mid July.
 
@@ -62,7 +62,7 @@ Okay, so much for the background. Now let's begin with the simplified version of
 * A Python module to process the bitmap park map to
   * clean the grey noises;
   * enlarge the map for human reading.
-  ![processed map](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways%20labeled%20v2.jpg)
+  ![processed map]<img src="https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways%20labeled%20v2.jpg" width="400px" />
 
 * Imported the data to MySQL database and restructured to four tables.
   * A table with all records, adding index, total times of visit, and the temporal order of each visit.
@@ -120,10 +120,10 @@ The design process including ideations and iterations can be found [here](https:
     1. First, we attempted forced-directed graph without force as the nodes' location should be fixed. The links between nodes represent two directions of the road by the arrows and their shades tell the traffic amount. The problem is the arrows overlapping with the node. A closer look,
     ![directed network](https://va.tech.purdue.edu/vast2017/mc1/design/directed-network.jpg)
 
-    2. Then we updated the directed graph to geographic based map using curvature to indicate the traffic direction (assuming driving by the right). The position of the nodes, which are park sites, strictly follows the provided map. Color of the nodes indicates its type. The links, a.k.a the roads, are double coded by width and colors. However, the use of hues for amount are confusing and the links width are hard to differentiate.
+    1. Then we updated the directed graph to geographic based map using curvature to indicate the traffic direction (assuming driving by the right). The position of the nodes, which are park sites, strictly follows the provided map. Color of the nodes indicates its type. The links, a.k.a the roads, are double coded by width and colors. However, the use of hues for amount are confusing and the links width are hard to differentiate.
     ![geo map](https://va.tech.purdue.edu/vast2017/mc1/design/geomap.png)
 
-    3. Finally we finalized the design with the map below. We redistributed the positions of the gates for aesthetics. After all the exact location of each site is compromisable. We carefully designed the color of the nodes and used only one color for the links with various brightness to tell the traffic. The meaning of the width of the links change dynamically based on the maximum local value in the current view.
+    1. Finally we finalized the design with the map below. We redistributed the positions of the gates for aesthetics. After all the exact location of each site is compromisable. We carefully designed the color of the nodes and used only one color for the links with various brightness to tell the traffic. The meaning of the width of the links change dynamically based on the maximum local value in the current view.
     ![final map](https://va.tech.purdue.edu/vast2017/mc1/design/finalmap.png)
 
 * Node (a.k.a sites/gates)
