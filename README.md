@@ -12,9 +12,9 @@ In the summer of 2017 (also in 2016 but another story), I worked with two serial
 * **manage the design and development iteration**. Normally we had 1-2 weekly meetings to report the progress and to discuss/critique the design ideas and their implementation. Since the projects were driven by the solution and the design, we started by exploring and massaging the data in the first couple of weeks. Meanwhile we brainstormed a lot of design ideas. When a design plan including features and visualization forms were determined in the meetings, I setup goals and deadlines for both design and development so that we could present the practical-but-mocked-up progress in the next meeting.
 
   >![Process](https://uploads-ssl.webflow.com/5b43c1ec7ab3d835fb006c5d/5b468b8276d89c85825d1b2b_vast-process.png)
-(process flowmap courtesy by one of the designers Wenjie Wu)
+(process flowmap courtesy by one of the designers [Wenjie Wu](https://wenjiewu.com))
 
-* **implement and code the design ideas for mini challenge one** with the undergrad developer. I architected the tech stack, controlled the versions (OMG I really should've used Git but it was complicated...), and guidelined the code styles. My resolute choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
+* **implement and code the design ideas for mini challenge one** with the undergrad developer. I architected the tech stack, controlled the versions (OMG I really should've used Git but it was complicated...), and suggested the code styles. My resolute choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
 
 * **morally support the team** by organizing team lunch and activities such as canoeing and barbecues.
 
@@ -41,7 +41,7 @@ Okay, now let's begin with the simplified version of the problem...
 
   Same vehicle entered the park multiple times maintained the <em>car ID</em>. There were seven types of vehicles in total. Data description can be found [here](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Data%20Descriptions%20for%20MC1%20v2.docx).
 
-  |Timestamp|car-id|car-type|gate-name|
+  |timestamp|car-id|car-type|gate-name|
   |---|---|:---:|---|
   |2015-05-01 00:15:13|20151501121513-39|2| entrance4|
   |2015-05-01 00:32:47|20151501121513-39|2| entrance2|
@@ -59,14 +59,50 @@ Okay, now let's begin with the simplified version of the problem...
 * A Python module to process the bitmap park map to
   * clean the grey noises;
   * enlarge the map for human reading.
+  ![processed map](https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways%20labeled%20v2.jpg)
+
 * Imported the data to MySQL database and restructured to four tables.
   * A table with all records, adding index, total times of visit, and the temporal order of each visit.
+
+    |id|timestamp|car-id|car-type|gate-name|tdate|ttime|times|sequence|
+    |---|---|---|:---:|---|---|---|---|---|
+    |1|2015-05-01 00:15:13|20151501121513-39|2|entrance4|2015-05-01|00:15:13|1|1|
+    |2|2015-05-01 00:32:47|20151501121513-39|2|entrance2|2015-05-01|00:32:47|1|2|
+    |3|2015-05-01 01:12:42|20151201011242-330|5|entrance0|2015-05-01|01:12:42|1|1|
+    |4|2015-05-01 01:14:22|20151201011242-330|5|general-gate1|2015-05-01|01:14:22|1|2|
+    |5|2015-05-01 01:17:13|20151201011242-330|5|ranger-stop2|2015-05-01|01:17:13|1|3|
+    |6|2015-05-01 01:20:36|20151201011242-330|5|ranger-stop0|2015-05-01|01:20:36|1|4|
+    |7|2015-05-01 01:24:11|20151201011242-330|5|general-gate2|2015-05-01|01:24:11|1|5|
+    |8|2015-05-01 01:46:16|20151201011242-330|5|entrance2|2015-05-01|01:46:16|1|6|
+
   * A table compressed the visits from the same vehicle, showing total number of records, earliest and latest record time, and total times of visit.
-  * A table with rows showing each visit segmenet based on temporal order.
-  * A table specifically with rows indicating the duration of vehicles staying on camping sites.
+
+    |car-id|car-type|counts|minTime|maxTime|times|
+    |---|:---:|:---:|---|---|---|
+    |20151501121513-39|2|2|2015-05-01 00:15:13|2015-05-01 00:32:47|1|
+    |20151201011242-330|5|6|2015-05-01 01:12:42|2015-05-01 01:46:16|1|
+
+  * A table with rows showing each visiting segment based on temporal order.
+
+    |id|carid|stoptart|stopend|seconds|starttime|endtime|sequence|times|cartype|
+    |---|---|---|---|:---:|---|---|:---:|:---:|:---:|
+    |1|20150001010009-284|entrance3|general-gate1|1244|2015-07-01 13:00:09|2015-07-01 13:20:53|1|1|3|
+    |2|20150001010009-284|general-gate1|ranger-stop2|159|2015-07-01 13:20:53|2015-07-01 13:23:32|2|1|3|
+    |3|20150001010009-284|ranger-stop2|ranger-stop0|184|2015-07-01 13:23:32|2015-07-01 13:26:36|3|1|3|
+
+
+  * A table specifically with rows indicating the duration of vehicles staying on camping sites and ranger stations.
+
+    |carid|cartype|tdate|gatename|hours|
+    |---|:---:|---|---|---|
+    |20150002070024-376|2|2015-06-02|camping0|07:00:00|
+    |20150003080058-668|3|2015-07-03|camping0|09:00:00|
+    |20150011070002-311|3|2015-07-11|camping0|07:00:00|
 
 ## Design Ideation
-The design ideas and iterations can be found [here](https://va.tech.purdue.edu/vast2017/presentation/Purdue-Zhou-Tang-Wu-Multi-final.pptx) or [here](https://vimeo.com/242499465).
+The design process including ideations and iterations can be found [here](https://va.tech.purdue.edu/vast2017/presentation/Purdue-Zhou-Tang-Wu-Multi-final.pptx) or [here](https://vimeo.com/242499465). Below is some highlights.
+
+*
 
 ### [Finding](http://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202017/challenges/Mini-Challenge%201/entries/Purdue%20University/)
 
