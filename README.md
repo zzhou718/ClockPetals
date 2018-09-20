@@ -2,7 +2,7 @@
 
 ## Introduction
 ClockPetals is an online visual analytics system designed for traffic analysis. This project was submitted to [2017 IEEE Visual Analytics for Science and Technology (VAST) Challenge Mini-Challenge One](http://vacommunity.org/VAST+Challenge+2017+MC1).<br>
-![overview](https://va.tech.purdue.edu/vast2017/mc1/design/overview.gif)
+![overview](https://va.tech.purdue.edu/vast2017/mc1/design/overview.webp)
 
 A bit about the VAST challenge: it's an annual IEEE competition event aiming to advancing visual analytics idea, design, and techniques. It usually kick off in late April and ends by mid July.
 
