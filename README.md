@@ -169,9 +169,20 @@ The design process including ideations and iterations can be found [here](https:
   * Vehicles in detail view filtered by selecting certain entering time. Hover the "pin" to highlight all stays by the same vehicle. Click the small circle on one end to see its route on the map.
     ![detail](https://va.tech.purdue.edu/vast2017/mc1/design/detail.gif)
 
-###
+  * Click the petal to see line graph showing the daily traffic trend.
+## Development
 
-### [Finding](http://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202017/challenges/Mini-Challenge%201/entries/Purdue%20University/)
+The entire system runs on an Apache+Linux+MySQL server hosted at Purdue. For fetching the data, we scripted several JSON APIs using PHP and Python and used d3.json() to access the APIs. Frontend, we used D3 V4 with extensions such as d3-scale-chromatic and d3-extended. The animation were mostly programmed using d3.transit(). We were not able to achieve vanilla as the vehicle type filtering rules are pretty complex so that we used jQuery. The overall JavaScript code is around 5,000 lines.
+
+## [Finding](http://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202017/challenges/Mini-Challenge%201/entries/Purdue%20University/)
+
+## What happened/will happen next?
+
+* I revisited the system almost a year after the competition. I refactored some code to enable the responsive layout across various computer screens.
+* Bug fixes. For example, the hourly traffic line graph is still missing in 30-day view.
+* The data gets transferred to the browser is still very large (dozens of MB). It's okay after the first-time website visit as the data would be cached. But to improve the first-time visit, a couple of things are possible:
+  * use Promise to control when the data finishes transfer so that we can do some walk-through before it's done.
+  * render the overview, which needs a lot of data, on the server and only transfer the rendered HTML.
 
 ## License
 This document is licensed under the [Creative Commons Attribution Share Alike 4.0 International](https://choosealicense.com/licenses/cc-by-sa-4.0/), and the underlying source code used to create this document is licensed under the [MIT license](LICENSE.md).
