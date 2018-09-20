@@ -7,19 +7,22 @@ Each year VAST challenge provides meticulously synthesized dataset and context s
 
 In the summer of 2017 (also in 2016 but another story), I worked with two serial-competitor-and-awardee professors in VAST challenge, along with an undergrad developer, a data scientist PhD (remote),and three visual designers. We competed for two mini challenges in parallel. I was appointed as the team lead to
 
-* manage the design and development iteration. Normally we had 1-2 weekly meetings to report the progress and to discuss/critique the design ideas and their implementation. Since the projects were driven by the solution and the design, we started by exploring and massaging the data in the first couple of weeks. Meanwhile we brainstormed a lot of design ideas. When a design plan including features and visualization forms were determined in the meetings, I setup goals and deadlines for both design and development so that we could present the practical-but-mocked-up progress in the next meeting.
+* **manage the design and development iteration**. Normally we had 1-2 weekly meetings to report the progress and to discuss/critique the design ideas and their implementation. Since the projects were driven by the solution and the design, we started by exploring and massaging the data in the first couple of weeks. Meanwhile we brainstormed a lot of design ideas. When a design plan including features and visualization forms were determined in the meetings, I setup goals and deadlines for both design and development so that we could present the practical-but-mocked-up progress in the next meeting.
 
 >![Process](https://uploads-ssl.webflow.com/5b43c1ec7ab3d835fb006c5d/5b468b8276d89c85825d1b2b_vast-process.png)
 (process flowmap courtesy by one of the designers Wenjie Wu)
 
-* implement and code the design ideas for mini challenge one with the undergrad developer. I architected the tech stack, controlled the versions (OMG I really should've used Git but it was complicated...), and guidelined the code styles. My resolute choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
+* **implement and code the design ideas for mini challenge one** with the undergrad developer. I architected the tech stack, controlled the versions (OMG I really should've used Git but it was complicated...), and guidelined the code styles. My resolute choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
 
-* morally support the team by organizing team lunch and activities such as canoeing and barbecues.
+* **morally support the team** by organizing team lunch and activities such as canoeing and barbecues.
+
+Okay, now let begin with the simplified version of the problem...
 
 
-## Simplified Problem Statement
+## Problem Statement
 ### Context
-The synthetic data came from the vehicle sensors installed at major visiting sites, road conjunctions, entrances, and gates in a fictional natural perserve park. Each vehicle that visited and **entered** the park would be assigned a unique <em>car ID</em>. The sensor would record the <em>car ID</em> and the <em>timestamp</em> when the vehicle passed by the sensor. So, each vehicle passed by a sensor would generate a row of record in the dataset. The dataset contained 170,000+ entries over 13 months.
+**The problem**: an ornithologist investigated the human activities' impact to an endangered specie of bird in a fictional natural preserve park. He hypothetically related the downhill change of the number of birds to 1) the air and noise pollution brought by the park traffic and 2) the campers' (even poachers') invasion. Our ornithologist need help to analyze the short and long term patterns and outliers of human life in the park through traffic sensor record in order to obtain the most impactful factors.
+**The data**: The synthetic data came from the vehicle sensors installed at major visiting sites, road conjunctions, entrances, and gates in the park. Each vehicle that visited the park would be assigned a unique <em>car ID</em>. A sensor would record the <em>car ID</em> and the <em>timestamp</em> when the vehicle passed by the sensor. So, each vehicle passed by a sensor would generate a row of record in the dataset. The dataset contained 170,000+ entries over 13 months.
 
 ### Data
 
