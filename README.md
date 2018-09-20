@@ -1,4 +1,4 @@
-## [Demo](https://va.tech.purdue.edu/vast2017/mc1 "ClockPetals") - **2017 IEEE VAST Challenge Multi-Challenge Award for Aesthetic Design**
+## [ClockPetals Demo](https://va.tech.purdue.edu/vast2017/mc1 "ClockPetals")
 
 ## Introduction
 This project was submitted to [2017 IEEE Visual Analytics for Science and Technology Challenge Mini-Challenge 1](http://vacommunity.org/VAST+Challenge+2017+MC1).
