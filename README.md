@@ -149,7 +149,10 @@ The design process including ideations and iterations can be found [here](https:
     Same logic. Length of the lines/bars for the duration of the stay.
     1. Lines organized linearly. The drawback is the time axis would be very long to cover every hour in every day in every month. <br>
     ![detail linear](https://va.tech.purdue.edu/vast2017/mc1/design/detaillinear.png)
-    2. Lines organized circularly.
+    2. Lines organized circularly. The direction of circumference is the month axis like the arrangement in overview (the node). The direction of radius is the duration of the stay. It's getting closed to the final design...
+    ![detail circular](https://va.tech.purdue.edu/vast2017/mc1/design/detaildraft.jpg)
+    3. We finalized the design as below. All vehicles that visited this camping site or ranger stops are plotted. The longer the length of the "pin", the longer this vehicle has stayed in the site. When it appears as dot, it means the stay is very short and needs to zoom in if needed. When it appears a line, it is read from outside towards center. The position of the starting end also indicates when (within a day) this vehicle entered the camping site. The ending end indicates the leaving time and provides an interactive hook to link this vehicle back to the map. The interaction designed on this view will be explained later.
+    ![detail final](https://va.tech.purdue.edu/vast2017/mc1/design/detail.png)
 
 
 
