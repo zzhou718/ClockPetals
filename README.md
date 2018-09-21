@@ -172,7 +172,7 @@ The design process including ideations and iterations can be found [here](https:
   * Click the petal to see line graph showing the daily traffic trend.
 ## Development
 
-The entire system runs on an Apache+Linux+MySQL server hosted at Purdue. For fetching the data, we scripted several JSON APIs using PHP and Python and used d3.json() to access the APIs. Frontend, we used D3 V4 with extensions such as d3-scale-chromatic and d3-extended. The animation were mostly programmed using d3.transit(). We were not able to achieve vanilla as the vehicle type filtering rules are pretty complex so that we used jQuery. The overall JavaScript code is around 5,000 lines.
+The entire system runs on an Apache+Linux+MySQL server hosted at Purdue. For fetching the data, we scripted several JSON APIs using PHP and Python and accessed the APIs using d3.json(). Frontend, we used D3 V4 with extensions such as d3-scale-chromatic and d3-extended. The animation were mostly programmed using d3.transit(). We were not able to achieve vanilla as the vehicle type filtering rules are pretty complex so that we used jQuery. The overall JavaScript code is around 5,000 lines.
 
 ## [Findings](http://www.cs.umd.edu/hcil/varepository/VAST%20Challenge%202017/challenges/Mini-Challenge%201/entries/Purdue%20University/)
 
