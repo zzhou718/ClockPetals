@@ -1,4 +1,16 @@
-## [Click here to see ClockPetals system](https://va.tech.purdue.edu/vast2017/mc1 "ClockPetals")
+# [Click here to see ClockPetals system](https://va.tech.purdue.edu/vast2017/mc1 "ClockPetals")
+
+- [Click here to see ClockPetals system](#click-here-to-see-clockpetals-system)
+  - [Introduction](#introduction)
+  - [Problem Statement](#problem-statement)
+    - [Context](#context)
+    - [Data](#data)
+  - [Data Preprocessing](#data-preprocessing)
+  - [Features](#features)
+  - [Development](#development)
+  - [Findings](#findings)
+  - [What happened/will happen next?](#what-happenedwill-happen-next)
+  - [License](#license)
 
 ## Introduction
 ClockPetals is an online visual analytics system designed for traffic analysis. This project was submitted to [2017 IEEE Visual Analytics for Science and Technology (VAST) Challenge Mini-Challenge One](http://vacommunity.org/VAST+Challenge+2017+MC1).<br>
