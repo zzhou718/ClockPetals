@@ -1,4 +1,4 @@
-## [ClockPetals Demo](https://va.tech.purdue.edu/vast2017/mc1 "ClockPetals")
+## [Click here to see ClockPetals system](https://va.tech.purdue.edu/vast2017/mc1 "ClockPetals")
 
 ## Introduction
 ClockPetals is an online visual analytics system designed for traffic analysis. This project was submitted to [2017 IEEE Visual Analytics for Science and Technology (VAST) Challenge Mini-Challenge One](http://vacommunity.org/VAST+Challenge+2017+MC1).<br>
@@ -13,9 +13,9 @@ In the summer of 2017 (also in 2016 but another story), I worked with two serial
 * **manage the design and development iteration**. Normally we had 1-2 weekly meetings to report the progress and to discuss/critique the design ideas and their implementation. Since the projects were driven by the solution and the design, we started by exploring and massaging the data in the first couple of weeks. Meanwhile we brainstormed a lot of design ideas. When a design plan including features and visualization forms were determined in the meetings, I setup goals and deadlines for both design and development so that we could present the practical-but-mocked-up progress in the next meeting.
 
   >![Process](https://uploads-ssl.webflow.com/5b43c1ec7ab3d835fb006c5d/5b468b8276d89c85825d1b2b_vast-process.png)
-(process flowmap courtesy by one of the designers [Wenjie Wu](https://wenjiewu.com))
+(process flowmap courtesy by one of the designers [Wenjie Wu](http://wenjiewu.webflow.io/project/windnebula))
 
-* **implement and code the design ideas for mini challenge one** with the undergrad developer. I architected the tech stack, controlled the versions (OMG I really should've used Git but it was complicated...), and suggested the code styles. My resolute choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
+* **implement and code the design ideas for mini challenge one** with the undergrad developer. I architected the tech stack, controlled the versions (OMG I really should've used Git but it was complicated...), and suggested the code styles. The choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
 
 * **oversee the progress of mini challenge two** as we had quite a lot of ideation trials and its design iteration did not finalize until the last a couple of weeks.
 
