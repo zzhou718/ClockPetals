@@ -27,7 +27,7 @@ In the summer of 2017 (also in 2016 but another story), I worked with two serial
   >![Process](https://uploads-ssl.webflow.com/5b43c1ec7ab3d835fb006c5d/5b468b8276d89c85825d1b2b_vast-process.png)
 (process flowmap courtesy by one of the designers [Wenjie Wu](http://wenjiewu.webflow.io/project/windnebula))
 
-* **implement and code the design ideas for mini challenge one** with the undergrad developer. I architected the tech stack, controlled the versions (OMG I really should've used Git but the situation was complicated...), and suggested the code styles. The choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
+* **implement and code the design ideas for mini challenge one** with the undergrad developer. I architected the tech stack, controlled the versions (I really should've used Git but the situation was complicated...), and suggested the code styles. The choice on JavaScript and D3.js over PHP increased the performance and development efficiency indeed.
 
 * **oversee the progress of mini challenge two** as we had quite a lot of ideation trials and the design iteration did not finalize until the last a couple of weeks. What I could do was to prioritize ClockPetals and then participate in every discussion for mini challenge two.
 
@@ -72,8 +72,8 @@ Okay, so much for the background and my team. Now let's begin with the simplifie
 
 ## Data Preprocessing
 * A Python module to process the bitmap park map to
-  * clean the grey noises;
-  * enlarge the map for human reading.
+  * clean up the grey noises between the roads in white and lands in black.
+  * enlarge the map to facilitate analyzing the map.
   ![processed map]<img src="https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways%20labeled%20v2.jpg" width="400px" />
 
 * Imported the data to MySQL database and restructured to four tables.
@@ -122,7 +122,7 @@ The design process including ideations and iterations can be found [here](https:
 
     Given a map and time-sequential records, it's a typical spatio-temporal visualization problem. However, the map has nothing to do with the real world, which means no map API is available. The provided map looks utterly unpleasant (believe me or not, there was team made visualization out of that black map image). Moreover, we did further investigation on the map and the data and found that some road information seemed redundant. For example, we don't care much about if the vehicle took east bound or west bound to travel from location A to B. We also found major road conjunctions in the park, where the vehicles must pass by when their trip are across the park area. We came up an idea to revamp the map to make it more visually pleasant withholding necessary information. One of the visual designers did this in Adobe Illustrator so that we can have the pair (x, y) of the sensor of each site/gate.
 
-    Expressing a road that connects two sites is the next task. We wanted to distinguish the traffic direction (A to B or B to A) while maintaining the clarity. Google Map enables the traffic layer on each bounds of the road but one really needs to zoom in to tell the difference. We came up with an idea so please see iteration section.
+    Expressing a road that connects two sites is the next task. We wanted to distinguish the traffic direction (A to B or B to A) while maintaining the clarity. Google Map enables the traffic layer on each bounds of a road but one really needs to zoom in to tell the difference. We came up with an idea so please see iteration section.
 
     ![map ideation](https://va.tech.purdue.edu/vast2017/mc1/design/mapinitial.png)
 
