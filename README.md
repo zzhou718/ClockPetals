@@ -1,6 +1,6 @@
 # ClockPetals - A traffic analyzer
 
-Click [here](https://va.tech.purdue.edu/vast2017/mc1 "ClockPetals") to play with the system
+**Click [here](https://va.tech.purdue.edu/vast2017/mc1 "ClockPetals") to play with the system**
 
 - [ClockPetals - A traffic analyzer](#clockpetals---a-traffic-analyzer)
   - [Introduction](#introduction)
