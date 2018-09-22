@@ -106,7 +106,7 @@ Okay, so much for the background and my team. Now let's begin with the simplifie
     |3|20150001010009-284|ranger-stop2|ranger-stop0|184|2015-07-01 13:23:32|2015-07-01 13:26:36|3|1|3|
 
 
-  * A table specifically with rows indicating the duration of vehicles staying on camping sites and ranger stations.
+  * A table specifically with rows indicating when (hour) the vehicle entered the camping sites and the ranger stations.
 
     |carid|cartype|tdate|gatename|hours|
     |---|:---:|---|---|---|
