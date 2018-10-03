@@ -76,7 +76,7 @@ Okay, so much for the background and my team. Now let's begin with the simplifie
 * A Python module to process the bitmap park map to
   * clean up the grey noises between the roads in white and lands in black.
   * enlarge the map to facilitate analyzing the map.
-  ![processed map]<img src="https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways%20labeled%20v2.jpg" width="400px" />
+  ![processed map]<img src="https://va.tech.purdue.edu/vast2017/mc1/original_data_from_vast/Lekagul%20Roadways%20labeled%20v2.jpg" width="500px" />
 
 * Imported the data to MySQL database and restructured to four tables.
   * A table with all records, adding index, total times of visit, and the temporal order of each visit.
